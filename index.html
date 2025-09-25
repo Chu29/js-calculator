@@ -9,39 +9,118 @@
   <body>
     <main id="calc-ctn">
       <section id="calc-screen">
-        <input type="text" text />
+        <input type="text" class="input" />
+        <input type="text" class="output" />
       </section>
-      <section id="calc-btns">
-        <div class="group-btn">
-          <button>AC</button>
-          <button>+/-</button>
-          <button>%</button>
-          <button>÷</button>
-        </div>
-        <div class="group-btn">
-          <button>7</button>
-          <button>8/-</button>
-          <button>9</button>
-          <button>x</button>
-        </div>
-        <div class="group-btn">
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
-        </div>
-        <div class="group-btn">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>+</button>
-        </div>
-        <div class="group-btn">
-          <button>0</button>
-          <button>.</button>
-          <button>=</button>
-        </div>
-      </section>
+      <footer id="footer">
+        <section id="calc-btns">
+          <div class="group-btn">
+            <button class="btn btn-grey">AC</button>
+            <button class="btn btn-grey">+/-</button>
+            <button class="btn btn-grey">%</button>
+            <button class="btn btn-orange">÷</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-dark-grey">7</button>
+            <button class="btn btn-dark-grey">8</button>
+            <button class="btn btn-dark-grey">9</button>
+            <button class="btn btn-orange">x</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-dark-grey">4</button>
+            <button class="btn btn-dark-grey">5</button>
+            <button class="btn btn-dark-grey">6</button>
+            <button class="btn btn-orange">-</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-dark-grey">1</button>
+            <button class="btn btn-dark-grey">2</button>
+            <button class="btn btn-dark-grey">3</button>
+            <button class="btn btn-orange">+</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-dark-grey">
+              <svg
+                height="20"
+                width="20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g fill="none">
+                  <rect
+                    height="18.5"
+                    width="14.5"
+                    rx="3"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    x="4.75"
+                    y="2.75"
+                  />
+                  <rect
+                    height="3.75"
+                    width="7.5"
+                    rx="1"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    x="8.25"
+                    y="6.25"
+                  />
+                  <circle cx="8.5" cy="13.5" fill="currentColor" r="1" />
+                  <circle cx="12" cy="13.5" fill="currentColor" r="1" />
+                  <circle cx="15.5" cy="13.5" fill="currentColor" r="1" />
+                  <circle cx="8.5" cy="17.5" fill="currentColor" r="1" />
+                  <circle cx="12" cy="17.5" fill="currentColor" r="1" />
+                  <circle cx="15.5" cy="17.5" fill="currentColor" r="1" />
+                </g>
+              </svg>
+            </button>
+            <button class="btn btn-dark-grey">0</button>
+            <button class="btn btn-dark-grey">.</button>
+            <button class="btn btn-orange">=</button>
+          </div>
+        </section>
+        <section id="calc-advance">
+          <div class="group-btn">
+            <button class="btn btn-grey">√</button>
+            <button class="btn btn-grey">π</button>
+            <button class="btn btn-grey">^</button>
+            <button class="btn btn-grey">!</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-grey">Deg</button>
+            <button class="btn btn-grey">sin</button>
+            <button class="btn btn-grey">cos</button>
+            <button class="btn btn-grey">tan</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-grey">Inv</button>
+            <button class="btn btn-grey">e</button>
+            <button class="btn btn-grey">ln</button>
+            <button class="btn btn-grey">log</button>
+          </div>
+          <div class="group-btn">
+            <button class="btn btn-grey">(</button>
+            <button class="btn btn-grey">)</button>
+            <button class="btn btn-orange backspace">
+              <svg
+                height="50"
+                width="50"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.385 18q-.539 0-1.015-.244q-.476-.244-.79-.683L4 12l3.58-5.035q.314-.438.78-.702Q8.828 6 9.386 6h9q.67 0 1.143.472q.472.472.472 1.143v8.77q0 .67-.472 1.143q-.472.472-1.143.472h-9ZM19 17V7v10Zm-9.615 0h9q.23 0 .423-.192q.192-.193.192-.423v-8.77q0-.23-.192-.423Q18.615 7 18.385 7h-9q-.289 0-.548.144q-.26.144-.414.356L5.22 12l3.204 4.5q.154.212.414.356t.548.144Zm1.669-1.692l2.6-2.6l2.6 2.6l.708-.708l-2.6-2.6l2.6-2.6l-.708-.708l-2.6 2.6l-2.6-2.6l-.708.708l2.6 2.6l-2.6 2.6l.708.708Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </footer>
     </main>
     <script src="scripts/app.js"></script>
   </body>

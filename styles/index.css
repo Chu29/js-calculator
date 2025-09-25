@@ -3,3 +3,112 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+}
+
+#calc-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+  background-color: #000;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+}
+
+#calc-screen {
+  padding: 1rem;
+}
+
+#calc-screen .input,
+#calc-screen .output {
+  border: none;
+  display: flex;
+  width: 100%;
+  padding: 0 0 4rem 0;
+  border-radius: 0.2rem 0.2rem 0 0;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+#calc-screen .output {
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+
+#calc-btns,
+#calc-advance {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+#calc-btns {
+  padding-right: 0;
+}
+
+#calc-advance {
+  padding-left: 0;
+}
+
+#footer {
+  display: flex;
+  gap: 1rem;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button,
+.output::-webkit-outer-spin-button,
+.output::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.group-btn {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translate(0, -2px);
+  transition: 0.5s;
+}
+
+.btn:active {
+  transform: translate(0, 2px);
+}
+
+.btn-grey {
+  background-color: #808080;
+}
+
+.btn-orange {
+  background-color: #ffa500;
+}
+
+.btn-dark-grey {
+  background-color: #303030;
+}
+
+.backspace {
+  flex-grow: 1;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
