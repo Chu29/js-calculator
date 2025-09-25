@@ -30,7 +30,7 @@ body {
   border: none;
   display: flex;
   width: 100%;
-  padding: 0 0 4rem 0;
+  padding: 0 0 4rem;
   border-radius: 0.2rem 0.2rem 0 0;
   background-color: #1b1b1b;
   color: #fff;
@@ -59,14 +59,6 @@ body {
 #footer {
   display: flex;
   gap: 1rem;
-}
-
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button,
-.output::-webkit-outer-spin-button,
-.output::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .group-btn {
