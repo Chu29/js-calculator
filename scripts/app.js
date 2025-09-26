@@ -2,12 +2,11 @@
 
 const advanceBtn = document.querySelector('.scientific')
 const calcAdvance = document.querySelector('.calc-advance')
-const calcBtn = document.querySelector('.calc-btns')
 const clearBtn = document.querySelector('.clear')
 
 // select input and output screens
-let inputScreen = document.querySelector('.input')
-let outputScreen = document.querySelector('.output')
+const inputScreen = document.querySelector('.input')
+const outputScreen = document.querySelector('.output')
 
 // select all the buttons
 const operandBtn = document.querySelectorAll('.operand')
