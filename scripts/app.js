@@ -3,6 +3,7 @@
 const advanceBtn = document.querySelector('.scientific')
 const clearBtn = document.querySelector('.clear')
 const calcAdvance = document.querySelector('.calc-advance')
+const negateBtn = document.querySelector('.negate')
 
 // select input and output screens
 const inputScreen = document.querySelector('.input')
@@ -16,6 +17,22 @@ const equalsBtn = document.querySelector('.equal')
 let currentOperation = ''
 let currentInput = ''
 let previousInput = ''
+
+// toggle the sign of current input
+const toggleSign = () => {
+  if (currentInput === '') return
+
+  let num = parseFloat(currentInput)
+  num *= -1
+  currentInput = num.toString()
+
+  // update input screen
+  inputScreen.textContent = `${previousInput} ${currentOperation} ${currentInput}`
+}
+
+if (negateBtn) {
+  negateBtn.addEventListener('click', toggleSign)
+}
 
 // append numbers to the screen
 const appendNumber = (number) => {
