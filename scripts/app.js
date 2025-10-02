@@ -130,8 +130,9 @@ equalsBtn.addEventListener('click', () => {
 
 // toggle scientific calculator
 advanceBtn.addEventListener('click', () => {
-  calcAdvance.classList.toggle('hidden')
-  calcAdvance.style.paddingLeft = '0px'
+  alert('Feature coming soon!')
+  // calcAdvance.classList.toggle('hidden')
+  // calcAdvance.style.paddingLeft = '0px'
 })
 
 // clear the screen
