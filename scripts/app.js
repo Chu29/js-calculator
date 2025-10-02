@@ -132,7 +132,7 @@ equalsBtn.addEventListener('click', () => {
 advanceBtn.addEventListener('click', () => {
   alert('Feature coming soon!')
   // calcAdvance.classList.toggle('hidden')
-  // calcAdvance.style.paddingLeft = '0px'
+  calcAdvance.style.paddingLeft = '0px'
 })
 
 // clear the screen
