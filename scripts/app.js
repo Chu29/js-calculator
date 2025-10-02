@@ -3,13 +3,14 @@
 const advanceBtn = document.querySelector('.scientific')
 const clearBtn = document.querySelector('.clear')
 const calcAdvance = document.querySelector('.calc-advance')
-const negateBtn = document.querySelector('.negate')
 
 // select input and output screens
 const inputScreen = document.querySelector('.input')
 const outputScreen = document.querySelector('.output')
 
 // select the buttons
+const negateBtn = document.querySelector('.negate')
+const decimalBtn = document.querySelector('.decimal')
 const operandBtn = document.querySelectorAll('.operand')
 const operatorBtn = document.querySelectorAll('.operator')
 const equalsBtn = document.querySelector('.equal')
@@ -34,10 +35,25 @@ if (negateBtn) {
   negateBtn.addEventListener('click', toggleSign)
 }
 
-// append numbers to the screen
+// append numbers and decimal point to the screen
 const appendNumber = (number) => {
-  currentInput += number
+  // check if point exist
+  if (number === '.' && currentInput.includes('.')) {
+    return
+  }
+  if (number === '.' && currentInput === '') {
+    currentInput = '0.'
+  } else {
+    currentInput += number
+  }
   inputScreen.textContent = ` ${previousInput} ${currentOperation} ${currentInput}`
+}
+
+// event listener for decimal button
+if (decimalBtn) {
+  decimalBtn.addEventListener('click', () => {
+    appendNumber(decimalBtn.textContent)
+  })
 }
 
 // calculate
