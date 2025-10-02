@@ -60,8 +60,8 @@ if (decimalBtn) {
 const calculate = () => {
   if (previousInput === '' || currentInput === '') return
   let result
-  let prev = parseFloat(previousInput)
-  let current = parseFloat(currentInput)
+  const prev = parseFloat(previousInput)
+  const current = parseFloat(currentInput)
 
   switch (currentOperation) {
     case '+':
@@ -93,7 +93,7 @@ const appendOperation = (operation) => {
   if (currentInput === '') return
   // check if operator is %
   if (operation === '%') {
-    let result = parseFloat(currentInput) / 100
+    const result = parseFloat(currentInput) / 100
     outputScreen.textContent = result
     currentInput = ''
     inputScreen.textContent = ''
