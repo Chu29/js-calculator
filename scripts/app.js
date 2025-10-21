@@ -65,19 +65,19 @@ const calculate = () => {
 
   switch (currentOperation) {
     case '+':
-      result = prev + current
+      result = (prev + current).toFixed(2)
       break
     case '-':
-      result = prev - current
+      result = (prev - current).toFixed(2)
       break
     case '*':
-      result = prev * current
+      result = (prev * current).toFixed(2)
       break
     case '÷':
-      result = prev / current
+      result = (prev / current).toFixed(2)
       break
     case '%':
-      result = prev * (current / 100)
+      result = (prev * (current / 100)).toFixed(2)
       break
     default:
       break
@@ -91,14 +91,16 @@ const calculate = () => {
 // append operator
 const appendOperation = (operation) => {
   if (currentInput === '') return
+
   // check if operator is %
   if (operation === '%') {
     const result = parseFloat(currentInput) / 100
-    outputScreen.textContent = result
-    currentInput = ''
-    inputScreen.textContent = ''
+    currentInput = result.toString()
+    inputScreen.textContent = `${previousInput} ${currentOperation} ${currentInput}`
+    calculate()
     return
   }
+
   // condition for all other operators
   if (previousInput !== '') {
     calculate()
